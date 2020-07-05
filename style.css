@@ -1,0 +1,233 @@
+body
+{
+background-color: #c6adcc;
+/*background-repeat:no-repeat;
+ font-size: 200%;*/
+}
+.main
+{
+width:100%;
+height: 100%;
+background-color: #c6adcc;
+margin-top: -30px;
+
+}
+.main1
+{
+	max-width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	background-color: white;
+    padding-top: 20px;	
+}
+.main2
+{
+	max-width: 1000px;
+	height: 60px;
+	background-color: white;
+    padding-left: 10px;	
+}
+
+
+.cvad
+{
+     width: 150px;
+     height: 40px;
+     background-color: #F08080;
+	 background-repeat:no-repeat;
+	 transform: rotate(0deg);
+	 -webkit-border-radius: 10px; /*скругляем углы*/
+        border-radius: 10px;
+}
+.cvadrik
+ {
+	 width: 30px;
+     height: 30px;
+   background-image: url(imgs/m.jpg);
+	 background-repeat:no-repeat;
+	 transform: rotate(115deg);
+	 -webkit-border-radius: 10px; /*скругляем углы*/
+        border-radius: 10px;
+		
+		animation-name: sp; /*прописываем имя анимации*/
+
+animation-duration: 7s; /*время вращения 7 сек*/
+
+animation-timing-function: liner; /* параметры движения фигуры*/
+
+animation-delay: 1s; /*время задержки анимации*/
+
+animation-iteration-count: infinite; /*зацикливаем анимацию. заместо инфинити можно поставить количество циклов*/
+
+animation-direction: reverse; /*вращение по часовой стрелке против - reverse по очереди - alternate */
+ }
+ 
+ .cvadrik1
+ {
+	 width: 30px;
+     height: 30px;
+     background-image: url(imgs/e.jpg);
+	 transform: rotate(0deg);
+	 background-repeat:no-repeat;
+	 -webkit-border-radius: 10px; /*скругляем углы*/
+        border-radius: 10px;
+		
+		animation-name: sp; /*прописываем имя анимации*/
+
+animation-duration: 7s; /*время вращения 7 сек*/
+
+animation-timing-function: liner; /* параметры движения фигуры*/
+
+animation-delay: 1s; /*время задержки анимации*/
+
+animation-iteration-count: infinite; /*зацикливаем анимацию. заместо инфинити можно поставить количество циклов*/
+
+animation-direction: reverse; /*вращение по часовой стрелке против - reverse по очереди - alternate */
+ }
+ .cvadrik2
+ {
+	 width: 30px;
+     height: 30px;
+   background-image: url(imgs/n.jpg);
+	 background-repeat:no-repeat;
+	 transform: rotate(20deg);
+	 -webkit-border-radius: 10px; /*скругляем углы*/
+        border-radius: 10px;
+		
+		animation-name: sp; /*прописываем имя анимации*/
+
+animation-duration: 7s; /*время вращения 7 сек*/
+
+animation-timing-function: liner; /* параметры движения фигуры*/
+
+animation-delay: 1s; /*время задержки анимации*/
+
+animation-iteration-count: infinite; /*зацикливаем анимацию. заместо инфинити можно поставить количество циклов*/
+
+animation-direction: reverse; /*вращение по часовой стрелке против - reverse по очереди - alternate */
+ }
+ .cvadrik3
+ {
+	 width: 30px;
+     height: 30px;
+   background-image: url(imgs/u.jpg);
+	 background-repeat:no-repeat;
+	 transform: rotate(20deg);
+	 -webkit-border-radius: 10px; /*скругляем углы*/
+        border-radius: 10px;
+		
+		animation-name: sp; /*прописываем имя анимации*/
+
+animation-duration: 7s; /*время вращения 7 сек*/
+
+animation-timing-function: liner; /* параметры движения фигуры*/
+
+animation-delay: 1s; /*время задержки анимации*/
+
+animation-iteration-count: infinite; /*зацикливаем анимацию. заместо инфинити можно поставить количество циклов*/
+
+animation-direction: reverse; /*вращение по часовой стрелке против - reverse по очереди - alternate */
+ }
+ @keyframes sp /*задаем анимацию вращение фигуры кубика название произвольное берем sp - вращение */
+{
+0% {
+	transform: rotate(0deg);
+	}
+	
+100% {
+	transform: rotate(360deg);
+	}
+}
+text
+{
+font-size: 15px;
+}
+
+.textovoepole {
+line-height:1.3em;
+font-size: 1.5em;
+margin-left:10%;
+margin-right:10%;
+padding: 5px;
+padding-left: 20px;
+padding-right: 20px;
+}
+	.foc {
+	width: 150px; 
+	cursor:pointer; 
+	display:inline;
+	}
+	.foc:focus {
+	width: auto; 
+	z-index: 100;
+	}
+
+	.textik
+	{
+	font-size: 20px;
+	color:#c6adcc;
+	}
+	/*menu*/
+	
+	/* Оформление панели */
+#side-checkbox {
+    display: none;
+}
+.side-panel {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: -360px;
+    background: white;
+    transition: all 0.5s;   
+    width: 320px;
+    height: 100vh;
+    box-shadow: 10px 0 20px rgba(0,0,0,0.4);
+    color: #c6adcc;
+	font-size: 20px;
+    padding: 40px 20px;
+}
+.side-title {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #c6adcc;
+}
+
+
+.side-button-1 .side-close {
+    display: none;
+}
+
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-close {
+    display: block;
+}
+#side-checkbox:checked + .side-panel {
+    left: 0;
+}
+
+.side-button-2 {
+    font-size: 30px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    color: black;    
+    transition: all 280ms ease-in-out;    
+}
+.side-button-2:hover {
+    transform: rotate(45deg) scale(1.1);    
+    color: black;
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:70px;   /* Высота блока "footer" */
+  
+}
